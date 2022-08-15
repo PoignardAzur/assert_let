@@ -1,6 +1,13 @@
 [package]
 name = "assert_let"
 version = "0.1.0"
+license = "MIT"
+authors = ["Olivier FAURE <couteaubleu@gmail.com>"]
+description = "A convenience macro for writing pattern-matching tests"
+repository = "https://github.com/PoignardAzur/assert_let"
+categories = ["no-std", "macros"]
+keywords = ["assert", "let", "match", "pattern", "macro"]
+readme = "README.md"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
