@@ -2,7 +2,7 @@
 #![allow(unstable_features)]
 #![feature(let_else)]
 
-use assert_let::assert_let;
+use assert_let_bind::assert_let;
 
 #[test]
 fn test_assert_succeed() {

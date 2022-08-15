@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "assert_let"
+name = "assert_let_bind"
 version = "0.1.0"

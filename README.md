@@ -1,4 +1,4 @@
-# assert_let
+# assert_let_bind
 
 A convenience macro for writing pattern-matching tests in the Rust programming language.
 
@@ -7,7 +7,7 @@ The `assert_let` macro tests whether a value matches a given pattern, binding th
 (Strongly inspired by [assert_matches](https://github.com/murarth/assert_matches))
 
 ```
-use assert_let::assert_let;
+use assert_let_bind::assert_let;
 
 #[derive(Debug)]
 enum Foo {
@@ -34,13 +34,13 @@ This macro relies on `let else`, and thus only compiles in nightly Rust for now.
 To add it to your project:
 
 ```rust
-cargo add assert_let
+cargo add assert_let_bind
 ```
 
 To add it only to your tests:
 
 ```rust
-cargo add --dev assert_let
+cargo add --dev assert_let_bind
 ```
 
 
