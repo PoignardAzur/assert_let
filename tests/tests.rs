@@ -1,3 +1,4 @@
+#![allow(dead_code)]
 #![allow(unstable_features)]
 #![feature(let_else)]
 
@@ -19,6 +20,20 @@ fn test_assert_succeed() {
 
     assert_let!(Some(_), Some(42), "some assert message");
     assert_let!(Some(_), Some(42), "some assert {}", "message");
+}
+
+#[derive(Debug)]
+enum Foo {
+    A(i32, i32),
+    B(i32),
+}
+
+#[test]
+fn test_complex_match() {
+    let foo = Foo::A(3000, 2000);
+
+    assert_let!(Foo::A(x, y), foo);
+    assert_eq!(x + y, 5000);
 }
 
 #[test]
