@@ -9,6 +9,7 @@ categories = ["no-std", "development-tools::debugging"]
 keywords = ["assert", "let", "match", "pattern", "macro"]
 readme = "README.md"
 edition = "2021"
+rust-version = "1.65"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 

@@ -1,10 +1,14 @@
 # assert_let_bind
 
-A convenience macro for writing pattern-matching tests in the Rust programming language.
+A convenience macro for writing pattern-matching tests in the Rust programming
+language.
 
-The `assert_let` macro tests whether a value matches a given pattern, binding the pattern in the current scope if the match succeeds and causing a panic if the match fails.
+The `assert_let` macro tests whether a value matches a given pattern, binding
+the pattern in the current scope if the match succeeds and causing a panic if
+the match fails.
 
-(Strongly inspired by [assert_matches](https://github.com/murarth/assert_matches))
+(Strongly inspired by
+[assert_matches](https://github.com/murarth/assert_matches))
 
 ```
 use assert_let_bind::assert_let;
@@ -29,7 +33,7 @@ let pattern = expr else { panic!("some panic message with {} {}", pattern, expr)
 
 ## Usage
 
-This macro relies on `let else`, and thus only compiles in nightly Rust for now.
+This macro relies on `let else`, and thus only compiles from Rust 1.65 onwards.
 
 To add it to your project:
 
@@ -43,11 +47,10 @@ To add it only to your tests:
 cargo add --dev assert_let_bind
 ```
 
-
 ## License
 
-This code is distributed under the terms of the MIT license. See LICENSE file for details.
-
+This code is distributed under the terms of the MIT license. See LICENSE file
+for details.
 
 ## Contributing
 

@@ -5,8 +5,6 @@
 //! (Strongly inspired by [assert_matches](https://github.com/murarth/assert_matches))
 //!
 //! ```
-//! # #![allow(unstable_features)]
-//! # #![feature(let_else)]
 //! use assert_let_bind::assert_let;
 //!
 //! #[derive(Debug)]
@@ -17,7 +15,7 @@
 //!
 //! let foo = Foo::A(3000, 2000);
 //!
-//! assert_let!(Foo::A(x, y), foo);
+//! assert_let!(Foo::A(x, y) = foo);
 //! assert_eq!(x + y, 5000);
 //! ```
 
@@ -26,14 +24,12 @@
 /// Generally speaking, `assert_let(pattern, expr)` is roughly equivalent to:
 ///
 /// ```rust
-/// # #![allow(unstable_features)]
-/// # #![feature(let_else)]
 /// # #[cfg(FALSE)]
 /// let pattern = expr else { panic!("some panic message with {} {}", pattern, expr)};
 /// ```
 #[macro_export]
 macro_rules! assert_let {
-    ( $pat:pat, $e:expr ) => {
+    ( $pat:pat = $e:expr ) => {
         let expr = $e;
         #[rustfmt::skip]
         let $pat = expr else {
@@ -45,7 +41,7 @@ macro_rules! assert_let {
         };
     };
 
-    ( $pat:pat, $e:expr, $($arg:tt)* ) => {
+    ( $pat:pat = $e:expr, $($arg:tt)* ) => {
         let expr = $e;
         #[rustfmt::skip]
         let $pat = expr else {
